@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: hishamshaikhamslearnmicroservicesdevopsaspnetcore 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hishamshaikhamslearnmicroservicesdevopsaspnetcore
+  template:
+    metadata:
+      labels:
+        app: hishamshaikhamslearnmicroservicesdevopsaspnetcore 
+    spec:
+      containers:
+        - name: hishamshaikhamslearnmicroservicesdevopsaspnetcore 
+          image: ratingapp.azurecr.io/hishamshaikhamslearnmicroservicesdevopsaspnetcore
+          ports:
+          - containerPort: 80
